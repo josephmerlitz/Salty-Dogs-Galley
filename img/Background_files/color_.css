@@ -1,0 +1,104 @@
+
+/*color*/
+#inCart, .bigBtn:hover, #subscribe_infoBox .link:hover{color:#5fb4de!important;}
+
+#content a, .link, .signInLink, .registerLink, .headerLaunchBtn:hover, .new, .notSelected:hover, .select:hover, #selectAll:hover, #showTagCloud:hover, a.tagCloudLink, .dropDownLink:hover, .tagLink:hover, .paneIcon:hover, .launchEditorBtn:hover, #myThemes, .infoQM:hover, .infoCellTag, .productThbTitle h5, #productPrice, td.itemPrice, #totalCartPrice, #freeDownloads, #goSubscription, #feedback a:hover, .downloadBtn:hover, #saveBtn:hover, .ui-slider-handle:hover, .formatsAvailable, .deadTab:hover, .btn1:hover, .btn3:hover, a.smInfoText, #easyCheckout, #confirmPaymentAmmount, .lightBtn:hover, h3 a, .liveBtn, .subLink, #partnerReturnText:hover, .partnerHeaderText, .infoBox_link{color:#3F94BE!important;}
+
+#content a:hover, .link:hover, .signInLink:hover, .registerLink:hover, a.tagCloudLink:hover, .infoCellTag:hover, #feedback a, .existingTagLink:hover, td.downloadType_2{color:#00547e!important;}
+
+
+
+/*background*/
+.activeCart:hover, #myThemesContainerBG, .thbNavHover:hover, .activeDo:hover{background-color:#7fd4fe!important;}
+#select_Content:hover, .select:hover .dropDownArrow, .bigClose:hover, .slClose:hover, .fullScreen:hover, .restoreScreen:hover, #vColorRefresh:hover, .bigBtn:hover, .deleteItemBtn:hover, .deleteDownloadBtn:hover, .deleteApplyInstBtn:hover, #saveBtn:hover, #keepColors_checkBox, #rememberCheckBox, #lightBox_container-back:hover, #minShare:hover{background-color:#5fb4de!important;}
+#page_pCoolrLogo, #showContentMenu .dropdownTop, #searchBtn:hover, .activeLink:hover, .activeDo, .selectWholePalette, .simpleNavBtn:hover, #productGallery:hover, .nudge:hover, #downloadFile, #downloadAssetFile, #generateArea, .addColorButt:hover, a.bigBtn, .bgColorMid, #lightBox_container-back, #goArrow, #minShare{background-color:#3F94BE!important;}
+
+input[type=checkbox]:not(old) + label, input[type=radio]:not(old) + label, .downloadBtn:hover, #shuffleSelect .radio, .smClose:hover{background-color:#5fb4de!important;}
+
+/*border*/
+#content a, .link, .signInLink, .registerLink, a.smInfoText, .infoBox_link{border-bottom:1px dotted #3F94BE!important;}
+#content a:hover, .link:hover, .signInLink:hover, .registerLink:hover{border-bottom:1px dashed #00547e!important;}
+.select:hover .dropDownArrow, #tagCloud, .dropDown, input:focus, textarea:focus, #editor_container, #mainMenu, .savedPaletteCell:hover, #bigBtnBox, #downloadSignedOut input, .keepPaletteCell:hover, #patternSizeSliderContainer:hover #patternSizeSlider, .infoBoxFader{border:1px solid #3F94BE!important;}
+#donateBox, #downloadGenerateBtns, #checkoutTotalBox, #downloadPriceContainer, #confirmPaymentContainer, #signInPrompt, .openContent{border:2px solid #3F94BE!important;}
+.selectedPaneIcon{border:1px solid #5fb4de;}
+#subscribe_infoBox .link:hover{border-color:#5fb4de!important;}
+#partnerApplyBtn{border:4px solid #3F94BE!important;}
+
+.savedColorCell:hover, .vThbCell:hover, .selectWholePalette, .delPatternCell:hover, .savedPatCell:hover, .deadTextureCell:hover, #feedback a:hover{border-color:#3F94BE!important;}
+#feedback a{border-color:#00547e;}
+
+.rightArrow{border-color: transparent transparent transparent #3F94BE;}
+.rightArrow:hover{border-color: transparent transparent transparent #00547e;}
+
+
+input::-moz-selection, #urlBar::-moz-selection, textarea::-moz-selection{background-color:#3F94BE;color:#fff!important;}
+input::selection, #urlBar::selection, textarea::selection{background-color:#3F94BE;color:#fff!important;}
+
+.saveBtn:hover{background-color:#3F94BE;color:#3F94BE;}
+
+#content button{
+background: #3F94BE;
+background: -moz-linear-gradient(#3F94BE, #00547e);
+background: -webkit-linear-gradient(#3F94BE, #00547e);
+background: -o-linear-gradient(#3F94BE, #00547e);
+background: -ms-linear-gradient(#3F94BE, #00547e);
+background: linear-gradient(#3F94BE, #00547e);
+}
+
+h5#download_price{color:#FF3F00;}
+.success{background:#D7E7C7;border:2px solid #88B858;color:#497919;}
+.error{background:#F5D5D5;border:2px solid #E28282;color:#A34343;}
+.notice, .areaGenerating{background:#ECDCCC;border:1px solid #D9B999;color:#B37333;}
+
+#patternPrice{background:#7FFF00;}
+
+td.col1{background:#CDE5ED;color:#1C4C5C;}
+td.col2{background:#E2E2C2;color:#474707;}
+td.col3{background:#F0D8D1;color:#633324;}
+td.col1 span{color:#3898B8;}
+td.col2 span{color:#8E8E0E;}
+td.col3 span{color:#C66647;}
+th.col1{background:#3898B8;}
+th.col2{background:#8E8E0E;}
+th.col3{background:#C66647;}
+
+
+
+
+td.col2 .getSubscription{
+background: #8E8E0E;
+background: -moz-linear-gradient(#8E8E0E, #6B6B0B);
+background: -webkit-linear-gradient(#8E8E0E, #6B6B0B);
+background: -o-linear-gradient(#8E8E0E, #6B6B0B);
+background: -ms-linear-gradient(#8E8E0E, #6B6B0B);
+background: linear-gradient(#8E8E0E, #6B6B0B);
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#8E8E0E', endColorstr='#6B6B0B'); 
+}
+
+td.col2 .getSubscription:hover, td.col3 .getSubscription:hover{color:#ddd!important;}
+td.col3 .getSubscription{
+background: #C66647;
+background: -moz-linear-gradient(#C66647, #954D36);
+background: -webkit-linear-gradient(#C66647, #954D36);
+background: -o-linear-gradient(#C66647, #954D36);
+background: -ms-linear-gradient(#C66647, #954D36);
+background: linear-gradient(#C66647, #954D36);
+filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#C66647', endColorstr='#954D36'); 
+}
+
+
+
+#subscriptionBoxL{color:#474707;}
+#subscriptionBoxL .subscriptionDetails{background:filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6B6B0B', endColorstr='#8E8E0E');
+background: -ms-linear-gradient(top, #6B6B0B 0%, #8E8E0E 100%);
+background: -moz-linear-gradient(top, #6B6B0B 0%, #8E8E0E 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6B6B0B), color-stop(100%,#8E8E0E));
+background: -webkit-linear-gradient(top, #6B6B0B 0%,#8E8E0E 100%);}
+#subscriptionBoxR{color:#633324;}
+#subscriptionBoxR .subscriptionDetails{background:filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#954D36', endColorstr='#C66647');
+background: -ms-linear-gradient(top, #954D36 0%, #C66647 100%);
+background: -moz-linear-gradient(top, #954D36 0%, #C66647 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#954D36), color-stop(100%,#C66647));
+background: -webkit-linear-gradient(top, #954D36 0%,#C66647 100%);}
+
+
