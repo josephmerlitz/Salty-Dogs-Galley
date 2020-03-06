@@ -11,59 +11,71 @@ import Footer from '../Footer';
 import MenuItems from '../MenuItems';
 import './style.css';
 import PlaceOrder from '../PlaceOrder';
+import { CartContext } from '../../contexts/CartContext';
 
 class Navbar extends Component {
+
+
+
     render() {
         return (
-            <Router>
-                <div>
-                    <nav>
-                        <ul className="nav-flex-row">
-                            <li className="nav-item">
-                                <Link to="/home">Home</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/menu">Menu</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/placeOrder">Place Order</Link>
-                            </li>
-                            <li className="nav-item">
-                                <Link to="/cart">Cart<h5 style={{ display: "inline" }}><span class="badge badge-light ml-1" style={{ position: "absolute" }}>4</span></h5></Link>
-                            </li>
-                        </ul>
-                    </nav>
+            <CartContext.Consumer>{(context) => {
 
-                    <section className="section-intro" style={{ backgroundImage: "url(213074.jpg)" }}>
-                        <header>
-                            <h1>Salty Dog's Galley</h1>
-                        </header>
-                    </section>
+                console.log(context);
 
-                    <Switch>
-                        <Route exact path="/">
-                            <Description />
-                            <Carousel />
-                            <Footer />
-                        </Route>
-                        <Route path="/home">
-                            <Description />
-                            <Carousel />
-                            <Footer />
-                        </Route>
-                        <Route path="/menu">
-                            <MenuItems />
-                            <Footer />
-                        </Route>
-                        <Route path="/placeOrder">
-                            <PlaceOrder />
-                            <Footer />
-                        </Route>
-                    </Switch>
+                const { cartItemsCount } = context;
 
-                </div>
-            </Router>
-        )
+                return (<Router>
+                    <div>
+                        <nav>
+                            <ul className="nav-flex-row">
+                                <li className="nav-item">
+                                    <Link to="/home">Home</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/menu">Menu</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/placeOrder">Place Order</Link>
+                                </li>
+                                <li className="nav-item">
+                                    <Link to="/cart">Cart<h5 style={{ display: "inline" }}><span class="badge badge-light ml-1" style={{ position: "absolute" }}>{cartItemsCount}</span></h5></Link>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <section className="section-intro" style={{ backgroundImage: "url(213074.jpg)" }}>
+                            <header>
+                                <h1>Salty Dog's Galley</h1>
+                            </header>
+                        </section>
+
+                        <Switch>
+                            <Route exact path="/">
+                                <Description />
+                                <Carousel />
+                                <Footer />
+                            </Route>
+                            <Route path="/home">
+                                <Description />
+                                <Carousel />
+                                <Footer />
+                            </Route>
+                            <Route path="/menu">
+                                <MenuItems />
+                                <Footer />
+                            </Route>
+                            <Route path="/placeOrder">
+                                <PlaceOrder />
+                                <Footer />
+                            </Route>
+                        </Switch>
+
+                    </div>
+                </Router>)
+            }}</CartContext.Consumer>
+        );
+
     }
 }
 

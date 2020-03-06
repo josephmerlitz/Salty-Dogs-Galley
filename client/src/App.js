@@ -1,10 +1,13 @@
 import React from 'react';
 import Navbar from './components/Navbar';
+import CartContextProvider from './contexts/CartContext';
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <CartContextProvider>
+        <Navbar />
+      </CartContextProvider>
     </div>
   );
 }

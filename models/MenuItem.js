@@ -11,6 +11,9 @@ const MenuItemSchema = new Schema({
     },
     imgSrc: {
         type: String
+    },
+    dishPrice: {
+        type: String
     }
 })
 
