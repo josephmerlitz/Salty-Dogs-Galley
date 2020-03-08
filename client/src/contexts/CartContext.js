@@ -8,25 +8,35 @@ class CartContextProvider extends Component {
         cartItems: []
     }
 
-    incItems = () => {
-        this.setState({ cartItemsCount: this.state.cartItemsCount + 1 });
+    incItems = (id, dishPrice) => {
+        let cartItemsArray = this.state.cartItems;
+        cartItemsArray.push({ id, dishPrice });
+        console.log(cartItemsArray)
+        this.setState({ cartItemsCount: this.state.cartItemsCount + 1, cartItems: cartItemsArray });
     }
 
-    decItems = () => {
+    decItems = (id, dishPrice) => {
         if (this.state.cartItemsCount > 0) {
-            this.setState({ cartItemsCount: this.state.cartItemsCount - 1 });
-        }
-    }
+            let cartItemsArray = this.state.cartItems;
 
-    setCartItems = (item) => {
-        let items = [...this.state.cartItems];
-        items.push(item);
-        this.setState({ cartItems: items });
+            for (var i = 0; i < cartItemsArray.length; i++) {
+                console.log('inside for loop');
+                if (cartItemsArray[i].id === id) {
+                    cartItemsArray.splice(i, 1);
+                    this.setState({ cartItemsCount: this.state.cartItemsCount - 1, cartItems: cartItemsArray });
+                    return;
+                }
+            }
+
+            //console.log(cartItemsArray);
+
+        }
+
     }
 
     render() {
         return (
-            <CartContext.Provider value={{ ...this.state, incItems: this.incItems, decItems: this.decItems, setCartItems: this.setCartItems }}>
+            <CartContext.Provider value={{ ...this.state, incItems: this.incItems, decItems: this.decItems }}>
                 {this.props.children}
             </CartContext.Provider>
         );

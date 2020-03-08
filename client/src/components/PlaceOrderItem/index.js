@@ -14,9 +14,9 @@ class PlaceOrderItem extends Component {
     }
 
     decCount = () => {
-        if (this.state.itemCount > 0) {
-            this.setState({ itemCount: this.state.itemCount - 1 })
-        }
+
+        this.setState({ itemCount: this.state.itemCount - 1 })
+
     }
 
     render() {
@@ -32,14 +32,16 @@ class PlaceOrderItem extends Component {
                         <div className="row">
                             <div className="col-4 text-right"><button style={{ width: "40px" }} className=" btn btn-light text-center" onClick={() => {
                                 if (this.state.itemCount > 0) {
-                                    this.setState({ itemCount: this.state.itemCount - 1 });
-                                    decItems();
+                                    this.decCount();
+                                    decItems(this.props.item._id, this.props.item.dishPrice);
                                 }
                             }}>-</button></div>
                             <div className="col-4 text-center"><h3>{this.state.itemCount}</h3></div>
-                            <div className="col-4  text-left"><button style={{ width: "40px" }} className=" btn btn-light text-center" onClick={() => { incItems(); this.incCount(); }}>+</button></div>
+                            <div className="col-4  text-left"><button style={{ width: "40px" }} className="btn btn-light text-center" onClick={() => {
+                                this.incCount();
+                                incItems(this.props.item._id, this.props.item.dishPrice);
+                            }}>+</button></div>
                         </div>
-                        {/* <div className="mt-3 justify-content-center text-center"><button className=" btn btn-primary text-center">Add Item(s)</button></div> */}
                     </div>
                 </div>
             </div>

@@ -12,6 +12,7 @@ import MenuItems from '../MenuItems';
 import './style.css';
 import PlaceOrder from '../PlaceOrder';
 import { CartContext } from '../../contexts/CartContext';
+import Cart from '../Cart';
 
 class Navbar extends Component {
 
@@ -67,6 +68,10 @@ class Navbar extends Component {
                             </Route>
                             <Route path="/placeOrder">
                                 <PlaceOrder />
+                                <Footer />
+                            </Route>
+                            <Route path="/cart">
+                                <Cart />
                                 <Footer />
                             </Route>
                         </Switch>
