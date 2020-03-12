@@ -11,32 +11,29 @@ class CartContextProvider extends Component {
     incItems = (id, dishPrice) => {
         let cartItemsArray = this.state.cartItems;
         cartItemsArray.push({ id, dishPrice });
-        console.log(cartItemsArray)
         this.setState({ cartItemsCount: this.state.cartItemsCount + 1, cartItems: cartItemsArray });
     }
 
     decItems = (id, dishPrice) => {
         if (this.state.cartItemsCount > 0) {
             let cartItemsArray = this.state.cartItems;
-
             for (var i = 0; i < cartItemsArray.length; i++) {
-                console.log('inside for loop');
                 if (cartItemsArray[i].id === id) {
                     cartItemsArray.splice(i, 1);
                     this.setState({ cartItemsCount: this.state.cartItemsCount - 1, cartItems: cartItemsArray });
                     return;
                 }
             }
-
-            //console.log(cartItemsArray);
-
         }
+    }
 
+    emptyOutCart = () => {
+        this.setState({ cartItemsCount: 0, cartItems: [] });
     }
 
     render() {
         return (
-            <CartContext.Provider value={{ ...this.state, incItems: this.incItems, decItems: this.decItems }}>
+            <CartContext.Provider value={{ ...this.state, incItems: this.incItems, decItems: this.decItems, emptyOutCart: this.emptyOutCart }}>
                 {this.props.children}
             </CartContext.Provider>
         );

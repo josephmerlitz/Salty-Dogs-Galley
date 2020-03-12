@@ -7,11 +7,8 @@ class Cart extends Component {
     static contextType = CartContext;
 
     render() {
-        const { /* cartItemsCount, */ cartItems } = this.context;
-        //console.log(cartItemsCount);
-        console.log("cartItems##############: " + cartItems);
+        const { cartItems, emptyOutCart } = this.context;
 
-        //return unique values, then find the count and push to the new array
         let objectsArray = [];
 
         //return unique values from cartItems array
@@ -39,18 +36,26 @@ class Cart extends Component {
         let sum = 0;
         cartItems.map(element => sum = (parseFloat(sum) + parseFloat(element.dishPrice.replace('$', ''))));
 
-
         return (
             <div className="container mt-4">
 
-                <ul class="list-group">
+                <ul className="list-group">
                     {
-                        objectsArray.map(item => <CartItem itemId={item.id} itemCount={item.count} />)
+                        objectsArray.map(item => <CartItem key={item.id} itemId={item.id} itemCount={item.count} />)
                     }
                     {
                         <li className="list-group-item">
-                            {objectsArray.length ? <h3 className="text-center">Total Amount: {sum}
-                            </h3> : <h3 className="text-center">Cart is Empty!</h3>}
+                            {
+                                objectsArray.length
+                                    ? (
+                                        <div className="text-center">
+                                            <h3>Order Total Amount: ${sum.toFixed(2)}</h3>
+                                            <button className="btn btn-dark m-3 px-5 py-2" style={{ width: "250px" }}><span style={{ fontSize: "20px", }}>Place Order</span></button>
+                                            <button className="btn btn-dark m-3 px-5 py-2" onClick={() => emptyOutCart()} style={{ width: "250px" }}><span style={{ fontSize: "20px" }}>Cancel Order</span></button>
+                                        </div>
+                                    )
+                                    : <h3 className="text-center">Cart is Empty!</h3>
+                            }
                         </li>
                     }
 

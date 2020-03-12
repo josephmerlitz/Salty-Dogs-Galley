@@ -10,21 +10,19 @@ class PlaceOrderItem extends Component {
     }
 
     incCount = () => {
-        this.setState({ itemCount: this.state.itemCount + 1 })
+        this.setState({ itemCount: this.state.itemCount + 1 });
     }
 
     decCount = () => {
-
-        this.setState({ itemCount: this.state.itemCount - 1 })
-
+        this.setState({ itemCount: this.state.itemCount - 1 });
     }
 
     render() {
         const { incItems, decItems } = this.context;
         return (
-            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center" style={{ width: "100%" }}>
-                <div className="card m-3" style={{ width: "18rem" }} key={this.props.item._id}>
-                    <img src={this.props.item.imgSrc} alt={this.props.item.imgSrc} class="card-img-top" style={{ height: "18rem" }} />
+            <div className="col-xl-3 col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center" style={{ width: "100%" }} key={this.props.item._id}>
+                <div className="card m-3" style={{ width: "18rem" }}>
+                    <img src={this.props.item.imgSrc} alt={this.props.item.imgSrc} className="card-img-top" style={{ height: "18rem" }} />
                     <div className="card-body">
                         <h5 className="card-title">{this.props.item.name}</h5>
                         <p className="card-text">{this.props.item.dishDetails}</p>

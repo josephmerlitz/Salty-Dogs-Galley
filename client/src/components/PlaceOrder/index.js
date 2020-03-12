@@ -19,7 +19,6 @@ class PlaceOrder extends Component {
     getMenuItem = () => {
         axios.get('/api/menuItems')
             .then((res) => {
-                console.log(res.data);
                 this.setState({ menuitems: res.data });
             })
             .catch((err) => console.log(err));
@@ -31,7 +30,7 @@ class PlaceOrder extends Component {
             <div className="row m-3">
                 {this.state.menuitems.map(item => (
 
-                    <PlaceOrderItem item={item} />
+                    <PlaceOrderItem item={item} key={item._id} />
 
                 ))}
             </div>

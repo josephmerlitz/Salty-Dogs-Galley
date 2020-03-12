@@ -22,8 +22,6 @@ class CartItem extends Component {
 
     getItemDetails = (id) => {
         axios.get(`/api/menuItems/${id}`).then((res) => {
-            console.log(res.data);
-            console.log(res.data._id);
             this.setState({ id: res.data._id, name: res.data.name, dishDetails: res.data.dishDetails, imgSrc: res.data.imgSrc, dishPrice: res.data.dishPrice, itemCount: this.props.itemCount, totalCost: this.getTotalCost(res.data.dishPrice, this.props.itemCount) });
         }).catch((err) => console.log(err));
     }
@@ -38,11 +36,12 @@ class CartItem extends Component {
         const { incItems, decItems } = this.context;
 
         return (
+
             <div>
                 <li className="list-group-item" key={this.props.itemId}>
                     <div className="row no-gutters">
                         <div className="col-md-4">
-                            <img src={this.state.imgSrc} style={{ width: "200px", height: "200px" }} class="card-img" alt="..." />
+                            <img src={this.state.imgSrc} style={{ width: "200px", height: "200px" }} className="card-img" alt="..." />
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
@@ -63,7 +62,7 @@ class CartItem extends Component {
                                     }}>+</button></div>
                                 </div>
 
-                                <h6 className="card-text">Total Cost ${this.state.totalCost}</h6>
+                                <h6 className="card-text">Total Cost ${parseFloat(this.state.totalCost).toFixed(2)}</h6>
                             </div>
                         </div>
                     </div>

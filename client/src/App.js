@@ -1,12 +1,12 @@
 import React from 'react';
-import Navbar from './components/Navbar';
+import RoutingComponent from './components/RoutingComponent';
 import CartContextProvider from './contexts/CartContext';
 
 function App() {
   return (
     <div className="App">
       <CartContextProvider>
-        <Navbar />
+        <RoutingComponent />
       </CartContextProvider>
     </div>
   );
