@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const apiRoutes = require('./routes/apiRoutes');
 require('dotenv').config();
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const path = require('path');
 
 const app = express();
 
@@ -66,11 +67,11 @@ let getProductDetails = () => {
 
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, 'client/build')));
+    app.use(express.static(path.join(__dirname, 'client/build')));
 
-  app.get('*', function (req, res) {
-    res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
-  });
+    app.get('*', function (req, res) {
+        res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+    });
 }
 
 
