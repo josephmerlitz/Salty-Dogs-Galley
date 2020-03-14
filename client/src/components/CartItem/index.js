@@ -41,12 +41,12 @@ class CartItem extends Component {
                 <li className="list-group-item" key={this.props.itemId}>
                     <div className="row no-gutters">
                         <div className="col-md-4">
-                            <img src={this.state.imgSrc} style={{ width: "200px", height: "200px" }} className="card-img" alt="..." />
+                            <img src={this.state.imgSrc} style={{ width: "200px", height: "200px" }} className="card-img mx-auto" alt="..." />
                         </div>
                         <div className="col-md-8">
                             <div className="card-body">
-                                <h5 className="card-title">{this.state.name}</h5>
-                                <p className="card-text">Price: {this.state.dishPrice}</p>
+                                <h2 className="card-title fontStyler">{this.state.name}</h2>
+                                <h5 className="card-text fontStyler">Price: {this.state.dishPrice}</h5>
 
                                 <div className="row my-2">
                                     <div className="col-2 text-left"><button style={{ width: "40px" }} className="btn btn-light text-center" onClick={() => {
@@ -55,14 +55,14 @@ class CartItem extends Component {
                                             decItems(this.props.itemId);
                                         }
                                     }}>-</button></div>
-                                    <div className="col-2 text-center"><h3>{this.state.itemCount}</h3></div>
+                                    <div className="col-2 text-center fontStyler"><h3>{this.state.itemCount}</h3></div>
                                     <div className="col-2 text-right"><button style={{ width: "40px" }} className="btn btn-light text-center" onClick={() => {
                                         this.setState({ itemCount: this.state.itemCount + 1, totalCost: this.getTotalCost(this.state.dishPrice, this.state.itemCount + 1) });
                                         incItems(this.props.itemId, this.state.dishPrice);
                                     }}>+</button></div>
                                 </div>
 
-                                <h6 className="card-text">Total Cost ${parseFloat(this.state.totalCost).toFixed(2)}</h6>
+                                <h3 className="card-text fontStyler">Total Cost ${parseFloat(this.state.totalCost).toFixed(2)}</h3>
                             </div>
                         </div>
                     </div>

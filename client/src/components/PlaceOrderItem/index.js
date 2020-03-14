@@ -24,9 +24,9 @@ class PlaceOrderItem extends Component {
                 <div className="card m-3" style={{ width: "18rem" }}>
                     <img src={this.props.item.imgSrc} alt={this.props.item.imgSrc} className="card-img-top" style={{ height: "18rem" }} />
                     <div className="card-body">
-                        <h5 className="card-title">{this.props.item.name}</h5>
-                        <p className="card-text">{this.props.item.dishDetails}</p>
-                        <p className="card-text">{this.props.item.dishPrice}</p>
+                        <h5 className="card-title fontStyler">{this.props.item.name}</h5>
+                        <p className="card-text fontStyler">{this.props.item.dishDetails}</p>
+                        <p className="card-text fontStyler">{this.props.item.dishPrice}</p>
                         <div className="row">
                             <div className="col-4 text-right"><button style={{ width: "40px" }} className=" btn btn-light text-center" onClick={() => {
                                 if (this.state.itemCount > 0) {
@@ -34,7 +34,7 @@ class PlaceOrderItem extends Component {
                                     decItems(this.props.item._id, this.props.item.dishPrice);
                                 }
                             }}>-</button></div>
-                            <div className="col-4 text-center"><h3>{this.state.itemCount}</h3></div>
+                            <div className="col-4 text-center fontStyler"><h3>{this.state.itemCount}</h3></div>
                             <div className="col-4  text-left"><button style={{ width: "40px" }} className="btn btn-light text-center" onClick={() => {
                                 this.incCount();
                                 incItems(this.props.item._id, this.props.item.dishPrice);

@@ -32,9 +32,9 @@ class MenuItem extends Component {
                         <div className="card m-3" style={{ width: "18rem" }}>
                             <img src={item.imgSrc} alt={item.imgSrc} className="card-img-top" style={{ height: "18rem" }} />
                             <div className="card-body">
-                                <h5 className="card-title">{item.name}</h5>
-                                <p className="card-text">{item.dishDetails}</p>
-                                <p className="card-text">{item.dishPrice}</p>
+                                <h5 className="card-title fontStyler">{item.name}</h5>
+                                <p className="card-text fontStyler">{item.dishDetails}</p>
+                                <p className="card-text fontStyler">{item.dishPrice}</p>
                             </div>
                         </div>
                     </div>

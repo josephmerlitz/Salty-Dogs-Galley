@@ -33,11 +33,7 @@ class Navbar extends Component {
                             </ul>
                         </nav>
 
-                        <section className="section-intro" style={{ backgroundImage: "url(213074.jpg)" }}>
-                            <header>
-                                <h1>Salty Dog's Galley</h1>
-                            </header>
-                        </section>
+
                     </div>
 
                 )

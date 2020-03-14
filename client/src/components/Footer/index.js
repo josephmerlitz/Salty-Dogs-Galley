@@ -4,7 +4,8 @@ import './style.css';
 class Footer extends Component {
     render() {
         return (
-            <div className="container">
+
+            <div className="container-fluid bg-light">
                 <div className="row-flex">
                     <div className="flex-column-form text-center">
                         <h3>Social Media</h3>

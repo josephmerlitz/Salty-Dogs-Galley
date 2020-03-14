@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Text:100,300,400,500,600,700,800,900&display=swap');
+
+.fontStyler {
+  font-family: 'Big Shoulders Text', cursive;
+}
+
+.emptyBagImage {
+  background-size: cover;
+  height: 360px;
+  width: 430px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.bagIsEmpty {
+  font-family: 'Big Shoulders Text', cursive;
+  color: black;
+  font-size: 3em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
