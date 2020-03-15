@@ -35,7 +35,7 @@ export default class index extends Component {
                     </Route>
                     <Route path="/menu">
                         <Navbar />
-                        <HeaderSection bgUrl={{ backgroundImage: "url(213074.jpg)", height: "300px" }} />
+                        <HeaderSection bgUrl={{ backgroundImage: "url(213074.jpg)", height: "250px" }} />
                         <MenuItems />
                         <Footer />
                     </Route>

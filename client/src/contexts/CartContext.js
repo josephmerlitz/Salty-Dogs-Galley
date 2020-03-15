@@ -8,13 +8,13 @@ class CartContextProvider extends Component {
         cartItems: []
     }
 
-    incItems = (id, dishPrice) => {
+    incItems = (id, dishPrice, dishName) => {
         let cartItemsArray = this.state.cartItems;
-        cartItemsArray.push({ id, dishPrice });
+        cartItemsArray.push({ id, dishPrice, dishName });
         this.setState({ cartItemsCount: this.state.cartItemsCount + 1, cartItems: cartItemsArray });
     }
 
-    decItems = (id, dishPrice) => {
+    decItems = (id, dishPrice, dishName) => {
         if (this.state.cartItemsCount > 0) {
             let cartItemsArray = this.state.cartItems;
             for (var i = 0; i < cartItemsArray.length; i++) {

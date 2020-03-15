@@ -58,11 +58,11 @@ class CartItem extends Component {
                                     <div className="col-2 text-center fontStyler"><h3>{this.state.itemCount}</h3></div>
                                     <div className="col-2 text-right"><button style={{ width: "40px" }} className="btn btn-light text-center" onClick={() => {
                                         this.setState({ itemCount: this.state.itemCount + 1, totalCost: this.getTotalCost(this.state.dishPrice, this.state.itemCount + 1) });
-                                        incItems(this.props.itemId, this.state.dishPrice);
+                                        incItems(this.props.itemId, this.state.dishPrice, this.state.name);
                                     }}>+</button></div>
                                 </div>
 
-                                <h3 className="card-text fontStyler">Total Cost ${parseFloat(this.state.totalCost).toFixed(2)}</h3>
+                                <h3 className="card-text fontStyler">Total: ${parseFloat(this.state.totalCost).toFixed(2)}</h3>
                             </div>
                         </div>
                     </div>

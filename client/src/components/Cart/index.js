@@ -64,18 +64,18 @@ class Cart extends Component {
                                     ? (
                                         <div className="text-center">
                                             <div className="row">
-                                                <div className="col-6"><h3 className="text-right fontStyler">Order Amount</h3></div>
+                                                <div className="col-6"><h3 className="text-right fontStyler">Subtotal:</h3></div>
                                                 <div className="col-6"><h3 className="text-left fontStyler">${sum.toFixed(2)}</h3></div>
                                             </div>
                                             <div className="row">
-                                                <div className="col-6"><h3 className="text-right fontStyler">Tax</h3></div>
+                                                <div className="col-6"><h3 className="text-right fontStyler">Tax:</h3></div>
                                                 <div className="col-6"><h3 className="text-left fontStyler">${(sum.toFixed(2) * 10 / 100).toFixed(2)}</h3></div>
                                             </div>
                                             <div className="row">
                                                 <div className="col-lg-6 offset-lg-3 col-md-12 col-sm-12"><hr /></div>
                                             </div>
                                             <div className="row">
-                                                <div className="col-6"><h3 className="text-right fontStyler">Total Amount</h3></div>
+                                                <div className="col-6"><h3 className="text-right fontStyler">Total:</h3></div>
                                                 <div className="col-6"><h3 className="text-left fontStyler">${(sum + sum * 10 / 100).toFixed(2)}</h3></div>
                                             </div>
                                             {/* <button className="btn btn-dark m-3 px-5 py-2" style={{ width: "250px" }}><span style={{ fontSize: "20px", }}>Place Order</span></button> */}

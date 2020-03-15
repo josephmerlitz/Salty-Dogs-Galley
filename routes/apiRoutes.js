@@ -17,10 +17,11 @@ router.post('/newOrder', (req, res, next) => {
         customerName: req.body.customerName,
         customerAddress: req.body.customerAddress,
         orderId: req.body.orderId,
+        customerEmail: req.body.customerEmail,
         orderDetails: req.body.orderDetails,
         customerPhone: req.body.customerPhone,
         orderStatus: 'Pending'
-    };
+    }
 
     OrderItem.create(orderItem).then(data => res.json(data)).catch(next);
 

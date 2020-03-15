@@ -31,13 +31,13 @@ class PlaceOrderItem extends Component {
                             <div className="col-4 text-right"><button style={{ width: "40px" }} className=" btn btn-light text-center" onClick={() => {
                                 if (this.state.itemCount > 0) {
                                     this.decCount();
-                                    decItems(this.props.item._id, this.props.item.dishPrice);
+                                    decItems(this.props.item._id, this.props.item.dishPrice, this.props.item.name);
                                 }
                             }}>-</button></div>
                             <div className="col-4 text-center fontStyler"><h3>{this.state.itemCount}</h3></div>
                             <div className="col-4  text-left"><button style={{ width: "40px" }} className="btn btn-light text-center" onClick={() => {
                                 this.incCount();
-                                incItems(this.props.item._id, this.props.item.dishPrice);
+                                incItems(this.props.item._id, this.props.item.dishPrice, this.props.item.name);
                             }}>+</button></div>
                         </div>
                     </div>
