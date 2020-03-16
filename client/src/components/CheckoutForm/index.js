@@ -219,7 +219,11 @@ export default function CheckoutForm() {
         </table>
         <div className="row">
           <div className="col-12">
-            <Link to="/placeOrder" className="btn btn-primary my-3 form-control">Place Another Order</Link>
+            {/* <Link to="/placeOrder" className="btn btn-primary my-3 form-control">Place Another Order</Link> */}
+            <button className="btn btn-primary my-3 form-control" onClick={() => {
+              cartContext.emptyOutCart();
+              window.location = '/';
+            }}>Place Another Order</button>
           </div>
         </div>
       </div>

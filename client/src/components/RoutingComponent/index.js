@@ -54,7 +54,7 @@ export default class index extends Component {
                     <Route path="/checkout">
                         <CheckoutFormLoader />
                     </Route>
-                    <Route path="/manager" component={() => window.location = 'http://google.com'} />
+                    {/* <Route path="/manager" component={() => window.location = 'https://google.com'} /> */}
                     <Route component={() => window.location = '/'} />
                 </Switch>
             </Router>
