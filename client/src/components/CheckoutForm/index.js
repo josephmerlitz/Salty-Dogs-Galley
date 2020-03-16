@@ -152,7 +152,7 @@ export default function CheckoutForm() {
       <div className="container-fluid">
         <h3>We received your order!</h3>
 
-        <div className="row">
+        {/* <div className="row">
           <div className="col-xs-6 col-sm-6 col-md-6">
             <address>
               <strong>Elf Cafe</strong>
@@ -172,8 +172,8 @@ export default function CheckoutForm() {
               <em>Receipt #: 34522677W</em>
             </p>
           </div>
-        </div>
-        <table className="table table-hover">
+        </div> */}
+        <table className="table table-hover mt-3">
           <thead>
             <tr>
               <th>Item</th>
