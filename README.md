@@ -8,6 +8,21 @@ Password: 1234567
 ### Home Screen
 ![Home Screen](https://github.com/josephmerlitz/Salty-Dogs-Galley-Customer-App/blob/master/repo-images/Home.png)
 
+### Menu
+![Menu](https://github.com/josephmerlitz/Salty-Dogs-Galley-Customer-App/blob/master/repo-images/Menu.png)
+
+### Place Order Page
+![Place Order Page](https://github.com/josephmerlitz/Salty-Dogs-Galley-Customer-App/blob/master/repo-images/Order.png)
+
+### Cart
+![Cart](https://github.com/josephmerlitz/Salty-Dogs-Galley-Customer-App/blob/master/repo-images/Cart.png)
+
+### Checkout Page
+![Checkout Page](https://github.com/josephmerlitz/Salty-Dogs-Galley-Customer-App/blob/master/repo-images/Checkout.png)
+
+### Receipt Page
+![Receipt Page](https://github.com/josephmerlitz/Salty-Dogs-Galley-Customer-App/blob/master/repo-images/Receipt.png)
+
 ## You can follow the below steps to install and run the customer app
 
 1. Rename the file **.env.example** to **.env**
