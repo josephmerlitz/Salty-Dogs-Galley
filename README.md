@@ -6,8 +6,7 @@ User Name: sdg.manager@hotmail.com
 Password: 1234567
 
 ### Home Screen
-
-https://github.com/josephmerlitz/Salty-Dogs-Galley-Customer-App/blob/master/repo-images/Home.png
+![Home Screen](https://github.com/josephmerlitz/Salty-Dogs-Galley-Customer-App/blob/master/repo-images/Home.png)
 
 ## You can follow the below steps to install and run the customer app
 
