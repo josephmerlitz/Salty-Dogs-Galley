@@ -5,6 +5,10 @@ Salty-Dogs-Galley is a restaurant application created so you can order seafood d
 User Name: sdg.manager@hotmail.com
 Password: 1234567
 
+### Home Screen
+
+https://github.com/josephmerlitz/Salty-Dogs-Galley-Customer-App/blob/master/repo-images/Home.png
+
 ## You can follow the below steps to install and run the customer app
 
 1. Rename the file **.env.example** to **.env**
